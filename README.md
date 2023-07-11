@@ -42,3 +42,80 @@ Build new, integrated solutions that connect applications and services on-premis
 - [Event-Grid](/Integration/Event-Grid/)
 - [Logic-Apps](/Integration/Logic-Apps/)
 - [Service-Bus](/Integration/Service-Bus/)
+
+
+Azure Technical Demos for Digital App and Innovation
+====================================================
+
+This repository contains a collection of Azure technical demos specifically designed for digital app and innovation scenarios. Each demo provides a hands-on experience with Azure services and showcases how they can be utilized to build innovative and scalable applications.
+
+Table of Contents
+-----------------
+
+-   [Introduction](https://chat.openai.com/#introduction)
+-   [Demos](https://chat.openai.com/#demos)
+-   [Prerequisites](https://chat.openai.com/#prerequisites)
+-   [Getting Started](https://chat.openai.com/#getting-started)
+-   [Contributing](https://chat.openai.com/#contributing)
+-   [License](https://chat.openai.com/#license)
+
+Introduction
+------------
+
+In the world of digital app and innovation, Azure provides a wide range of services and capabilities that enable developers to create cutting-edge applications. This repository aims to demonstrate the power of Azure services through hands-on demos, allowing you to explore and understand their potential in real-world scenarios.
+
+Demos
+-----
+
+The following demos are currently available in this repository:
+
+1.  Demo 1: Title of the demo. Description of what the demo showcases and the Azure services it utilizes.
+2.  Demo 2: Title of the demo. Description of what the demo showcases and the Azure services it utilizes.
+3.  Demo 3: Title of the demo. Description of what the demo showcases and the Azure services it utilizes.
+
+Each demo folder contains detailed instructions and resources to help you set up and run the demo on Azure.
+
+Prerequisites
+-------------
+
+Before running the demos, ensure that you have the following prerequisites:
+
+1.  Azure subscription: You will need an active Azure subscription to deploy and test the demos.
+2.  Azure CLI: Install the Azure CLI tool to manage Azure resources and interact with Azure services via the command line.
+3.  Other specific prerequisites for each demo can be found in their respective folders.
+
+Getting Started
+---------------
+
+To get started with a demo, follow these steps:
+
+1.  Clone this repository to your local machine:
+
+    shellCopy code
+
+    `git clone https://github.com/your-username/azure-technical-demos.git`
+
+2.  Navigate to the demo folder you are interested in:
+
+    shellCopy code
+
+    `cd azure-technical-demos/demo-folder`
+
+3.  Follow the instructions provided in the demo's README.md file to set up and run the demo.
+
+Contributing
+------------
+
+Contributions to this repository are welcome! If you would like to contribute, please follow these guidelines:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Commit your changes and push the branch to your fork.
+4.  Submit a pull request with a clear description of your changes.
+
+Please ensure that your contributions align with the purpose and scope of this repository.
+
+License
+-------
+
+This repository is licensed under the [MIT License](https://chat.openai.com/LICENSE). Feel free to use and modify the demos according to the terms of this license.
