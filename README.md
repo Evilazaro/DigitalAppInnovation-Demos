@@ -11,6 +11,9 @@ Cloud-Native Applications
 Cloud native applications are built from the ground up---optimized for cloud scale and performance. They're based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
 
 [Cloud-Native Apps Content](/Cloud-Native/)
+- [Containers](/Cloud-Native/Containers/)
+- [AKS](/Cloud-Native/Containers/AKS/)
+- [Docker](/Cloud-Native/Containers/Docker/)
 
 DevOps
 ------
@@ -20,6 +23,14 @@ DevOps combines development (Dev) and operations (Ops) to unite people, process,
 Teams adopt DevOps culture, practices, and tools to increase confidence in the applications they build, respond better to customer needs, and achieve business goals faster. DevOps helps teams continually provide value to customers by producing better, more reliable products.
 
 [DevOps Content](/DevOps/)
+- [Continuous-Collaboration](/DevOps/Continuous-Collaboration/)
+- [Continuous-Delivery](/DevOps/Continuous-Delivery/)
+- [Continuous-Improvement](/DevOps/Continuous-Improvement/)
+- [Continuous-Integration](/DevOps/Continuous-Integration/)
+- [Continuous-Operations](/DevOps/Continuous-Operations/)
+- [Continuous-Planning](/DevOps/Continuous-Planning/)
+- [Continuous-Quality](/DevOps/Continuous-Quality/)
+- [Continuous-Security](/DevOps/Continuous-Security/)
 
 Integration
 -----------
@@ -27,3 +38,7 @@ Integration
 Build new, integrated solutions that connect applications and services on-premises and in the cloud. Bring your business workflows together so they're consistent and scalable. Expose your APIs for developers and create opportunities for new business models.
 
 [Integration Content](/Integration/)
+- [API-Management](/Integration/API-Management/)
+- [Event-Grid](/Integration/Event-Grid/)
+- [Logic-Apps](/Integration/Logic-Apps/)
+- [Service-Bus](/Integration/Service-Bus/)
