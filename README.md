@@ -25,11 +25,12 @@ Before running the demos, ensure that you have the following prerequisites:
 
 **Windows**
 
-1.  Azure subscription: You will need an active Azure subscription to deploy and test the demos.
-2.  Azure CLI: Install the Azure CLI tool to manage Azure resources and interact with Azure services via the command line.
-3.  VS Code
-4.  VS Azure Extensions
-3.  Other specific prerequisites for each demo can be found in their respective folders.
+1.  VS Code: [Install VS Code]((https://code.visualstudio.com/))
+2.  VS Code Extensions for Azure: [Install VS Code Extensions for Azure](https://marketplace.visualstudio.com/search?term=Azure&target=VSCode&category=All%20categories&sortBy=Relevance)
+3.  VS Code Extensions for GitHub: [Install VS Code Extensions for GitHub](https://marketplace.visualstudio.com/search?term=GitHub&target=VSCode&category=All%20categories&sortBy=Relevance)
+4.  Azure subscription: You will need an active Azure subscription to deploy and test the demos.
+5.  Azure CLI: [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) tool to manage Azure resources and interact with Azure services via the command line.
+6.  **Other specific prerequisites for each demo can be found in their respective folders.**
 
 **MAC OS**
 
@@ -54,7 +55,13 @@ To get started with a demo, follow these steps:
     or
     cd Integration
 ``````
-3.  Follow the instructions provided in the demo's README.md file to set up and run the demo.
+3. Open VS Code on the respective folder
+``````bash
+    code .
+``````
+![image](/imgs/Screenshot%202023-07-11%20160525.png)
+
+4.  Follow the instructions provided in the demo's README.md file to set up and run the demo.
 
 Content
 -----
