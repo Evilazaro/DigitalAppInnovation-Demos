@@ -42,11 +42,17 @@ To get started with a demo, follow these steps:
 
 1.  Clone this repository to your local machine:
 ``````bash
-    git clone https://github.com/your-username/azure-technical-demos.git
+    git clone https://github.com/Evilazaro/DigitalAppInnovation-Demos.git
 ``````
-2.  Navigate to the demo folder you are interested in:
+2.  There are three folders you can navigate to check all the demos available. The folders are Cloud-Native, DevOps, and Integration. 
+
+    Navigate to the demo folder you are interested in:
 ``````bash
-    cd azure-technical-demos/demo-folder
+    cd Cloud-Native 
+    or
+    cd DevOps
+    or
+    cd Integration
 ``````
 3.  Follow the instructions provided in the demo's README.md file to set up and run the demo.
 
