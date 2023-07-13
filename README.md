@@ -25,12 +25,13 @@ Before running the demos, ensure that you have the following prerequisites:
 
 **Windows**
 
-1.  VS Code: [Install VS Code]((https://code.visualstudio.com/))
-2.  VS Code Extensions for Azure: [Install VS Code Extensions for Azure](https://marketplace.visualstudio.com/search?term=Azure&target=VSCode&category=All%20categories&sortBy=Relevance)
-3.  VS Code Extensions for GitHub: [Install VS Code Extensions for GitHub](https://marketplace.visualstudio.com/search?term=GitHub&target=VSCode&category=All%20categories&sortBy=Relevance)
-4.  Azure subscription: You will need an active Azure subscription to deploy and test the demos.
-5.  Azure CLI: [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) tool to manage Azure resources and interact with Azure services via the command line.
-6.  **Other specific prerequisites for each demo can be found in their respective folders.**
+1.  [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+2.  VS Code: [Install VS Code]((https://code.visualstudio.com/))
+3.  VS Code Extensions for Azure: [Install VS Code Extensions for Azure](https://marketplace.visualstudio.com/search?term=Azure&target=VSCode&category=All%20categories&sortBy=Relevance)
+4.  VS Code Extensions for GitHub: [Install VS Code Extensions for GitHub](https://marketplace.visualstudio.com/search?term=GitHub&target=VSCode&category=All%20categories&sortBy=Relevance)
+5.  Azure subscription: You will need an active Azure subscription to deploy and test the demos.
+6.  Azure CLI: [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) tool to manage Azure resources and interact with Azure services via the command line.
+7.  **Other specific prerequisites for each demo can be found in their respective folders.**
 
 **MAC OS**
 
