@@ -59,7 +59,7 @@ $SecurityType = @{Name='SecurityType';Value='TrustedLaunch'}
 $features = @($SecurityType) 
 
 # Create the image definition
-New-AzGalleryImageDefinition -GalleryName $galleryName -ResourceGroupName $imageResourceGroup -Location $location -Name $imageDefName -OsState generalized -OsType Windows -Publisher 'Contoso' -Offer 'vscodebox' -Sku '1-0-0' -Feature $features -HyperVGeneration "V2"
+New-AzGalleryImageDefinition -GalleryName $galleryName -ResourceGroupName $imageResourceGroup -Location $location -Name $imageDefName -OsState generalized -OsType Windows -Publisher 'Contoso' -Offer 'backend' -Sku '1-0-0' -Feature $features -HyperVGeneration "V2"
 
 $templateFilePath = "vmtemplate.json"
 

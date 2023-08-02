@@ -53,6 +53,13 @@
             },
             {
                 "type": "PowerShell",
+                "name": "Install Git",
+                "inline": [
+                    "choco install git.install -y"
+                ]
+            },
+            {
+                "type": "PowerShell",
                 "name": "Install Wdindows Subsystem for Linux",
                 "inline": [
                     "wsl --install -d Ubuntu-20.04"
@@ -70,6 +77,14 @@
                 "name": "Install Visual Studio Code",
                 "inline": [
                     "choco install vscode -y"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "Clone GitHub Repo",
+                "inline": [
+                    "mkdir c:\\Projects",
+                    "git clone https://github.com/Evilazaro/eShopOnContainers.git c:\\Projects\\eShopOnContainers"
                 ]
             }
           ],
