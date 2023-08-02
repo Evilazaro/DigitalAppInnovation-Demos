@@ -40,7 +40,7 @@ $identityNameResourceId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageRe
 $identityNamePrincipalId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).PrincipalId
 
 $aibRoleImageCreationUrl="https://raw.githubusercontent.com/azure/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json" 
-$aibRoleImageCreationPath = "./aibRoleImageCreation.json" 
+$aibRoleImageCreationPath = "aibRoleImageCreation.json" 
 
 # Download the configuration 
 Invoke-WebRequest -Uri $aibRoleImageCreationUrl -OutFile $aibRoleImageCreationPath -UseBasicParsing 
