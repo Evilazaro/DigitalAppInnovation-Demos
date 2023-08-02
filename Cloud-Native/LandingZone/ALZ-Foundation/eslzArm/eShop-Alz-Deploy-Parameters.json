@@ -1,0 +1,290 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "enterpriseScaleCompanyPrefix": {
+      "value": "eShop"
+    },
+    "singlePlatformSubscriptionId": {
+      "value": null
+    },
+    "telemetryOptOut": {
+      "value": "No"
+    },
+    "enableLogAnalytics": {
+      "value": "Yes"
+    },
+    "retentionInDays": {
+      "value": "30"
+    },
+    "managementSubscriptionId": {
+      "value": "9e946e16-45cd-4e6a-ad69-bb7c5e24c230"
+    },
+    "enableAgentHealth": {
+      "value": "No"
+    },
+    "enableChangeTracking": {
+      "value": "No"
+    },
+    "enableUpdateMgmt": {
+      "value": "No"
+    },
+    "enableVmInsights": {
+      "value": "No"
+    },
+    "enableSqlAssessment": {
+      "value": "No"
+    },
+    "enableSqlVulnerabilityAssessment": {
+      "value": "No"
+    },
+    "enableSqlAdvancedThreatProtection": {
+      "value": "No"
+    },
+    "enableAsc": {
+      "value": "No"
+    },
+    "emailContactAsc": {
+      "value": null
+    },
+    "enableAscForServers": {
+      "value": null
+    },
+    "enableAscForServersVulnerabilityAssessments": {
+      "value": null
+    },
+    "vulnerabilityAssessmentProvider": {
+      "value": null
+    },
+    "enableAscForOssDb": {
+      "value": null
+    },
+    "enableAscForCosmosDbs": {
+      "value": null
+    },
+    "enableAscForAppServices": {
+      "value": null
+    },
+    "enableAscForStorage": {
+      "value": null
+    },
+    "enableAscForSql": {
+      "value": null
+    },
+    "enableAscForSqlOnVm": {
+      "value": null
+    },
+    "enableAscForKeyVault": {
+      "value": null
+    },
+    "enableAscForArm": {
+      "value": null
+    },
+    "enableAscForApis": {
+      "value": null
+    },
+    "enableAscForCspm": {
+      "value": null
+    },
+    "enableAscForDns": {
+      "value": null
+    },
+    "enableAscForContainers": {
+      "value": null
+    },
+    "enableMDEndpoints": {
+      "value": null
+    },
+    "enableSecuritySolution": {
+      "value": "Yes"
+    },
+    "connectivitySubscriptionId": {
+      "value": "9e946e16-45cd-4e6a-ad69-bb7c5e24c230"
+    },
+    "addressPrefix": {
+      "value": null
+    },
+    "connectivityLocation": {
+      "value": null
+    },
+    "enableDdoS": {
+      "value": null
+    },
+    "enablePrivateDnsZones": {
+      "value": null
+    },
+    "enableVpnGw": {
+      "value": null
+    },
+    "gwRegionalOrAz": {
+      "value": null
+    },
+    "gwRegionalSku": {
+      "value": null
+    },
+    "gwAzSku": {
+      "value": null
+    },
+    "vpnGateWayScaleUnit": {
+      "value": null
+    },
+    "subnetMaskForGw": {
+      "value": null
+    },
+    "enableErGw": {
+      "value": null
+    },
+    "erAzSku": {
+      "value": null
+    },
+    "erRegionalSku": {
+      "value": null
+    },
+    "erRegionalOrAz": {
+      "value": null
+    },
+    "expressRouteScaleUnit": {
+      "value": null
+    },
+    "enableHub": {
+      "value": "No"
+    },
+    "enableAzFw": {
+      "value": null
+    },
+    "enableAzFwDnsProxy": {
+      "value": null
+    },
+    "firewallSku": {
+      "value": null
+    },
+    "firewallZones": {
+      "value": null
+    },
+    "subnetMaskForAzFw": {
+      "value": null
+    },
+    "subnetMaskForAzFwMgmt": {
+      "value": null
+    },
+    "identitySubscriptionId": {
+      "value": "9e946e16-45cd-4e6a-ad69-bb7c5e24c230"
+    },
+    "denyMgmtPortsForIdentity": {
+      "value": null
+    },
+    "denySubnetWithoutNsgForIdentity": {
+      "value": null
+    },
+    "denyPipForIdentity": {
+      "value": null
+    },
+    "enableVmBackupForIdentity": {
+      "value": null
+    },
+    "identityAddressPrefix": {
+      "value": null
+    },
+    "corpConnectedLzSubscriptionId": {
+      "value": null
+    },
+    "corpLzSubscriptionId": {
+      "value": "9e946e16-45cd-4e6a-ad69-bb7c5e24c230"
+    },
+    "onlineLzSubscriptionId": {
+      "value": [
+        "9e946e16-45cd-4e6a-ad69-bb7c5e24c230"
+      ]
+    },
+    "enableLzDdoS": {
+      "value": null
+    },
+    "denyPublicEndpoints": {
+      "value": "No"
+    },
+    "denyPipOnNicForCorp": {
+      "value": "No"
+    },
+    "enablePrivateDnsZonesForLzs": {
+      "value": null
+    },
+    "enableEncryptionInTransit": {
+      "value": "No"
+    },
+    "enableVmMonitoring": {
+      "value": "No"
+    },
+    "enableVmssMonitoring": {
+      "value": "No"
+    },
+    "enableAksPolicy": {
+      "value": "No"
+    },
+    "denyAksPrivileged": {
+      "value": "No"
+    },
+    "denyAksPrivilegedEscalation": {
+      "value": "No"
+    },
+    "denyClassicResources": {
+      "value": "No"
+    },
+    "denyVMUnmanagedDisk": {
+      "value": "No"
+    },
+    "denyHttpIngressForAks": {
+      "value": "No"
+    },
+    "enableVmBackup": {
+      "value": "No"
+    },
+    "denyMgmtPorts": {
+      "value": "No"
+    },
+    "denySubnetWithoutNsg": {
+      "value": "No"
+    },
+    "denyIpForwarding": {
+      "value": "No"
+    },
+    "enableSqlEncryption": {
+      "value": "No"
+    },
+    "enableSqlThreat": {
+      "value": "Yes"
+    },
+    "enableDecommissioned": {
+      "value": "No"
+    },
+    "enableSandbox": {
+      "value": "No"
+    },
+    "enableSqlAudit": {
+      "value": "No"
+    },
+    "enableStorageHttps": {
+      "value": "No"
+    },
+    "enforceKvGuardrails": {
+      "value": "No"
+    },
+    "denyHybridNetworking": {
+      "value": "No"
+    },
+    "auditPeDnsZones": {
+      "value": "No"
+    },
+    "auditAppGwWaf": {
+      "value": "No"
+    },
+    "enforceAcsb": {
+      "value": "No"
+    },
+    "delayCount": {
+      "value": null
+    },
+    "currentDateTimeUtcNow": {
+      "value": null
+    }
+  }
+}

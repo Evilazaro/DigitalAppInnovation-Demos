@@ -77,17 +77,22 @@ The following demos are currently available in this repository:
     - [Docker](/Cloud-Native/Containers/Docker/)
 
 
-**DevOps**: DevOps combines development (Dev) and operations (Ops) to unite people, process, and technology in application planning, development, delivery, and operations. DevOps enables coordination and collaboration between formerly siloed roles like development, IT operations, quality engineering, and security. Teams adopt DevOps culture, practices, and tools to increase confidence in the applications they build, respond better to customer needs, and achieve business goals faster. DevOps helps teams continually provide value to customers by producing better, more reliable products.
+**Engineering Practices**
 
-- [DevOps Content][devops]
-    - [Continuous-Collaboration][CC]
-    - [Continuous-Delivery][CD]
-    - [Continuous-Improvement][CIMP]
-    - [Continuous-Integration][CI]
-    - [Continuous-Operations][CO]
-    - [Continuous-Planning](/DevOps/Continuous-Planning/)
-    - [Continuous-Quality][CQ]
-    - [Continuous-Security][CS]
+- **Developer Onboard**
+    - Process maluco
+
+- **DevOps**: DevOps combines development (Dev) and operations (Ops) to unite people, process, and technology in application planning, development, delivery, and operations. DevOps enables coordination and collaboration between formerly siloed roles like development, IT operations, quality engineering, and security. Teams adopt DevOps culture, practices, and tools to increase confidence in the applications they build, respond better to customer needs, and achieve business goals faster. DevOps helps teams continually provide value to customers by producing better, more reliable products.
+
+    - [DevOps Content][devops]
+        - [Continuous-Collaboration][CC]
+        - [Continuous-Delivery][CD]
+        - [Continuous-Improvement][CIMP]
+        - [Continuous-Integration][CI]
+        - [Continuous-Operations][CO]
+        - [Continuous-Planning](/DevOps/Continuous-Planning/)
+        - [Continuous-Quality][CQ]
+        - [Continuous-Security][CS]
 
 **Integration**: Build new, integrated solutions that connect applications and services on-premises and in the cloud. Bring your business workflows together so they're consistent and scalable. Expose your APIs for developers and create opportunities for new business models.
 
