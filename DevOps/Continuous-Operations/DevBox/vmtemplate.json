@@ -43,39 +43,22 @@
             "sku": "win11-21h2-avd",
             "version": "latest"
         },
-          "customize": [
-            {
-              "type": "PowerShell",
-              "name": "Install WSL",
-              "inline": ["wsl --install"]
-            },
-            {
-                "type": "PowerShell",
-                "name": "Install Chocolatey",
-                "inline": ["Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"]
-            },
-            {
-                "type": "PowerShell",
-                "name": "Install VSCode",
-                "inline": ["choco install -y vscode"]
-            }
-          ],
-            "distribute": 
-            [
-                {   
-                    "type": "SharedImage",
-                    "galleryImageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/<imageDefName>",
-                    "runOutputName": "<runOutputName>",
-                    "artifactTags": {
-                        "source": "azureVmImageBuilder",
-                        "baseosimg": "win11multi"
-                    },
-                    "replicationRegions": [
-                      "<region1>",
-                      "<region2>"
-                    ]
-                }
-            ]
+          "distribute": 
+          [
+              {   
+                  "type": "SharedImage",
+                  "galleryImageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/<imageDefName>",
+                  "runOutputName": "<runOutputName>",
+                  "artifactTags": {
+                      "source": "azureVmImageBuilder",
+                      "baseosimg": "win11multi"
+                  },
+                  "replicationRegions": [
+                    "<region1>",
+                    "<region2>"
+                  ]
+              }
+          ]
         }
       }
     ]
