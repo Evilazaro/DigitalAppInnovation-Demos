@@ -27,7 +27,7 @@ $imageTemplateName="vscodeWinTemplate"
 
 # Set up role def names, which need to be unique 
 $timeInt=$(get-date -UFormat "%s") 
-$imageRoleDefName="aibIdentity-roledefinition"
+$imageRoleDefName="Owner"
 $identityName="aibIdentity"
 
 ## Add an Azure PowerShell module to support AzUserAssignedIdentity 
@@ -38,15 +38,6 @@ New-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identit
 
 $identityNameResourceId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).Id 
 $identityNamePrincipalId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).PrincipalId
-
-$aibRoleImageCreationUrl="https://raw.githubusercontent.com/azure/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json" 
-$aibRoleImageCreationPath = "aibRoleImageCreation.json" 
-
-# Download the configuration 
-Invoke-WebRequest -Uri $aibRoleImageCreationUrl -OutFile $aibRoleImageCreationPath -UseBasicParsing 
-((Get-Content -path $aibRoleImageCreationPath -Raw) -replace '<subscriptionID>',$subscriptionID) | Set-Content -Path $aibRoleImageCreationPath 
-((Get-Content -path $aibRoleImageCreationPath -Raw) -replace '<rgName>', $imageResourceGroup) | Set-Content -Path $aibRoleImageCreationPath 
-((Get-Content -path $aibRoleImageCreationPath -Raw) -replace 'Azure Image Builder Service Image Creation Role', $imageRoleDefName) | Set-Content -Path $aibRoleImageCreationPath 
 
 # Create a role definition 
 New-AzRoleDefinition -InputFile  ./aibRoleImageCreation.json 
