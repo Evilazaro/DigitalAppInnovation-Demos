@@ -27,7 +27,7 @@ $imageTemplateName="vscodeWinTemplate"
 
 # Set up role def names, which need to be unique 
 $timeInt=$(get-date -UFormat "%s") 
-$imageRoleDefName="Azure Image Builder Service Image Creation Role"
+$imageRoleDefName="aibIdentity-roledefinition"
 $identityName="aibIdentity"
 
 ## Add an Azure PowerShell module to support AzUserAssignedIdentity 
