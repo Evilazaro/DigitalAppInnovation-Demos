@@ -1,6 +1,8 @@
 Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck
 Install-Module -Name cChoco -Force -AllowClobber -SkipPublisherCheck
 
+wsl --install
+
 Configuration InstallDockerDesktop {
     Import-DscResource -ModuleName cChoco
 
