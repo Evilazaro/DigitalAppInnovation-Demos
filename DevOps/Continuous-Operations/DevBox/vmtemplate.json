@@ -47,17 +47,17 @@
             {
               "type": "PowerShell",
               "name": "Install WSL",
-              "inline": "wsl --install"
+              "inline": ["wsl --install"]
             },
             {
                 "type": "PowerShell",
                 "name": "Install Chocolatey",
-                "inline": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+                "inline": ["Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"]
             },
             {
                 "type": "PowerShell",
                 "name": "Install VSCode",
-                "inline": "choco install -y vscode"
+                "inline": ["choco install -y vscode"]
             }
           ],
             "distribute": 
