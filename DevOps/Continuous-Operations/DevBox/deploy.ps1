@@ -17,7 +17,7 @@ $currentAzContext = Get-AzContext
 # Get your current subscription ID  
 $subscriptionID=$currentAzContext.Subscription.Id  
 # Destination image resource group  
-$imageResourceGroup="Contoso-VM-Images"  
+$imageResourceGroup="Contoso-VM-Images-rg"  
 # Location  
 $location="eastus2"  
 # Image distribution metadata reference name  
@@ -39,7 +39,7 @@ New-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identit
 $identityNameResourceId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).Id 
 $identityNamePrincipalId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).PrincipalId
 
-$aibRoleImageCreationUrl="./aibRoleImageCreation.json" 
+$aibRoleImageCreationUrl="https://raw.githubusercontent.com/azure/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json" 
 $aibRoleImageCreationPath = "./aibRoleImageCreation.json" 
 
 # Download the configuration 
