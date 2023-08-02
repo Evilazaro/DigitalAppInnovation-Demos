@@ -1,7 +1,7 @@
 {
-    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
       "imageTemplateName": {
         "type": "string"
       },
@@ -43,25 +43,6 @@
             "sku": "win11-21h2-avd",
             "version": "latest"
         },
-          "extensions": [
-            {
-              "name": "DSC",
-              "properties": {
-                "type": "DSC",
-                "publisher": "Microsoft.Powershell",
-                "typeHandlerVersion": "2.79",
-                "autoUpgradeMinorVersion": true,
-                "settings": {
-                  "fileUris": [
-                    "https://raw.githubusercontent.com/azure-deployment/imagebuilder/master/quickquickstarts/11winmulti/11winmulti.ps1"
-                  ]
-                },
-                "protectedSettings": {
-                  "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File 11winmulti.ps1"
-                }
-              }
-            }
-          ],
           "customize": [
             {
                 "type": "PowerShell",
