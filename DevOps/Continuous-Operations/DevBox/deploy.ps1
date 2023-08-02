@@ -71,7 +71,7 @@ $features = @($SecurityType)
 # Create the image definition
 New-AzGalleryImageDefinition -GalleryName $galleryName -ResourceGroupName $imageResourceGroup -Location $location -Name $imageDefName -OsState generalized -OsType Windows -Publisher 'Contoso' -Offer 'vscodebox' -Sku '1-0-0' -Feature $features -HyperVGeneration "V2"
 
-$templateFilePath = ./vmtemplate.json
+$templateFilePath = "vmtemplate.json"
 
 (Get-Content -path $templateFilePath -Raw ) -replace '<subscriptionID>',$subscriptionID | Set-Content -Path $templateFilePath 
 (Get-Content -path $templateFilePath -Raw ) -replace '<rgName>',$imageResourceGroup | Set-Content -Path $templateFilePath 
