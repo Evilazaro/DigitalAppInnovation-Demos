@@ -34,14 +34,14 @@ $identityName="aibIdentity"
 Install-Module -Name Az.ManagedServiceIdentity 
 
 # Create an identity 
-New-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName -Location $location
+#New-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName -Location $location
 
 $identityNameResourceId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).Id 
 $identityNamePrincipalId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).PrincipalId
 
 # Grant the role definition to the VM Image Builder service principal 
 #New-AzRoleAssignment -ObjectId $identityNamePrincipalId -RoleDefinitionName $imageRoleDefName -Scope "/subscriptions/$subscriptionID/resourceGroups/$imageResourceGroup"
-New-AzRoleAssignment -ObjectId 950f523f-6b56-40d9-9110-02168bcffd76 -RoleDefinitionName "Owner" -Scope "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-VM-Images-rg"
+New-AzRoleAssignment -ObjectId 74238405-4949-4244-af9a-38b428397164 -RoleDefinitionName "Owner" -Scope "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-VM-Images-rg"
 
 # Gallery name 
 $galleryName= "devboxGallery" 
