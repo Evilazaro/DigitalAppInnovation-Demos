@@ -47,7 +47,7 @@ New-AzRoleAssignment -ObjectId 74238405-4949-4244-af9a-38b428397164 -RoleDefinit
 $galleryName= "ContosoDevBoxImageGallery" 
 
 # Image definition name 
-$imageDefName ="Contoso-Win-BackEnd-Dev-DevBox-Image" 
+$imageDefName ="Win-BackEnd-Dev-DevBox-Image" 
 
 # Additional replication region 
 $replRegion2="eastus" 
