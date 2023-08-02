@@ -44,10 +44,10 @@ $identityNamePrincipalId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageR
 New-AzRoleAssignment -ObjectId 74238405-4949-4244-af9a-38b428397164 -RoleDefinitionName "Owner" -Scope "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-VM-Images-rg"
 
 # Gallery name 
-$galleryName= "devboxGallery" 
+$galleryName= "Contoso-DevBox-ImageGallery" 
 
 # Image definition name 
-$imageDefName ="vscodeImageDef" 
+$imageDefName ="Contoso-Win-BackEnd-Dev-DevBox-Image" 
 
 # Additional replication region 
 $replRegion2="eastus" 

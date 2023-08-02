@@ -46,10 +46,30 @@
           "customize": [
             {
                 "type": "PowerShell",
-                "name": "Install Choco and Vscode",
+                "name": "Install Choco",
                 "inline": [
-                    "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))",
-                    "choco install -y vscode"
+                    "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "Install Wdindows Subsystem for Linux",
+                "inline": [
+                    "wsl --install -d Ubuntu-20.04"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "Install Docker Desktop",
+                "inline": [
+                    "choco install docker-desktop -y"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "Install Visual Studio Code",
+                "inline": [
+                    "choco install vscode -y"
                 ]
             }
           ],
