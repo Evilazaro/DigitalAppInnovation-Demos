@@ -9,7 +9,7 @@ echo "---------------"
 
 az resource create \
     --resource-group $imageResourceGroup \
-    --properties @helloImageTemplateWin.json \
+    --properties @Win11-Ent-Base-Image-Engineers.json \
     --is-full-object \
     --resource-type Microsoft.VirtualMachineImages/imageTemplates \
     -n $imageName

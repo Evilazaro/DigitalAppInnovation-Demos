@@ -1,0 +1,49 @@
+{
+    "type": "Microsoft.VirtualMachineImages/imageTemplates",
+    "apiVersion": "2022-02-14",
+    "location": "EASTUS2",
+    "dependsOn": [],
+    "tags": {
+        "imagebuilderTemplate": "Windows11Enterprise",
+        "userIdentity": "enabled"
+            },
+        "identity": {
+            "type": "UserAssigned",
+                    "userAssignedIdentities": {
+                    "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourcegroups/Contoso-ImageBuilder-Base-Images-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aibBuiUserId1691612227": {}
+                        
+                }
+                },
+    "properties": {
+
+        "buildTimeoutInMinutes" : 100,
+
+        "vmProfile": 
+                {
+                "vmSize": "Standard_E4as_v5",
+                "osDiskSizeGB": 128
+                },
+        
+        "source": {
+            "type": "PlatformImage",
+                "publisher": "microsoftwindowsdesktop",
+                "offer": "windows-11",
+                "sku": "win11-22h2-ent",
+                "version": "latest"
+            
+        },
+        "distribute": 
+            [
+                {   "type":"ManagedImage",
+                    "imageId": "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-ImageBuilder-Base-Images-rg/providers/Microsoft.Compute/images/Win11EntBaseImageEngineers",
+                    "location": "EASTUS2",
+                    "runOutputName": "Win11EntBaseImageEngineers",
+                    "artifactTags": {
+                        "source": "azVmImageBuilder",
+                        "baseosimg": "windows2019"
+                    }
+                }
+            ]
+        }
+}
+

@@ -6,13 +6,13 @@ echo "Setting Variables"
 echo "-----------------"
 
 # Resource group name - we're using myImageBuilderRG in this example
-imageResourceGroup='ContosoImageBuilderRG'
+imageResourceGroup='Contoso-ImageBuilder-Base-Images-rg'
 # Region location 
 location='EASTUS2'
 # Run output name
-runOutputName='ContosoWin11Image'
+runOutputName='Win11EntBaseImageEngineers'
 # The name of the image to be created
-imageName='ContosoWin11Image'
+imageName='Win11EntBaseImageEngineers'
 
 subscriptionID=$(az account show --query id --output tsv)
 

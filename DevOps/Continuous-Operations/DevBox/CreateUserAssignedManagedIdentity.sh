@@ -23,10 +23,8 @@ imgBuilderCliId=$(az identity show -g $imageResourceGroup -n $identityName --que
 # Get the user identity URI that's needed for the template
 imgBuilderId=/subscriptions/$subscriptionID/resourcegroups/$imageResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/$identityName
 
-vmSize="Standard_E4ads_v5"
-
 # Download the preconfigured role definition example
-curl https://raw.githubusercontent.com/azure/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json -o aibRoleImageCreation.json
+curl https://raw.githubusercontent.com/Evilazaro/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json -o aibRoleImageCreation.json
 
 imageRoleDefName="Azure Image Builder Image Def"$(date +'%s')
 
@@ -46,15 +44,14 @@ az role assignment create \
 
 echo "Download the image configuration template"
 
-curl https://raw.githubusercontent.com/azure/azvmimagebuilder/master/quickquickstarts/0_Creating_a_Custom_Windows_Managed_Image/helloImageTemplateWin.json -o helloImageTemplateWin.json
+curl https://raw.githubusercontent.com/Evilazaro/azvmimagebuilder/master/quickquickstarts/0_Creating_a_Custom_Windows_Managed_Image/Win11-Ent-Base-Image-Engineers.json -o Win11-Ent-Base-Image-Engineers.json
 
-sed -i -e "s%<subscriptionID>%$subscriptionID%g" helloImageTemplateWin.json
-sed -i -e "s%<rgName>%$imageResourceGroup%g" helloImageTemplateWin.json
-sed -i -e "s%<region>%$location%g" helloImageTemplateWin.json
-sed -i -e "s%<imageName>%$imageName%g" helloImageTemplateWin.json
-sed -i -e "s%<runOutputName>%$runOutputName%g" helloImageTemplateWin.json
-sed -i -e "s%<imgBuilderId>%$imgBuilderId%g" helloImageTemplateWin.json
-sed -i -e "s%<vmSize>%$vmSize%g" helloImageTemplateWin.json
+sed -i -e "s%<subscriptionID>%$subscriptionID%g" Win11-Ent-Base-Image-Engineers.json
+sed -i -e "s%<rgName>%$imageResourceGroup%g" Win11-Ent-Base-Image-Engineers.json
+sed -i -e "s%<region>%$location%g" Win11-Ent-Base-Image-Engineers.json
+sed -i -e "s%<imageName>%$imageName%g" Win11-Ent-Base-Image-Engineers.json
+sed -i -e "s%<runOutputName>%$runOutputName%g" Win11-Ent-Base-Image-Engineers.json
+sed -i -e "s%<imgBuilderId>%$imgBuilderId%g" Win11-Ent-Base-Image-Engineers.json
 
 
 
