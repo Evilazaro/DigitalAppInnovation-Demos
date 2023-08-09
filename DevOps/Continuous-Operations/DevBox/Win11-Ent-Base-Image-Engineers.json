@@ -32,6 +32,13 @@
                 "version": "latest"
             
         },
+        "customize": [
+            {
+                "type": "PowerShell",
+                "scriptUri": "[parameters('customizeScriptUri')]",
+                "name": "installWebServer"
+            }
+        ],
         "distribute": 
             [
                 {   "type":"ManagedImage",
