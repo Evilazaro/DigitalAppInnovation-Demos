@@ -14,7 +14,7 @@ echo "subscriptionID: $5"
 subscriptionID=$5
 echo "-------------------------------------------------------------"
 
-identityName=aibBuiUserId$(date +'%s')
+identityName=contosoIdentityIBuilderUser
 az identity create --resource-group $imageResourceGroup -n $identityName
 
 # Get the identity ID
@@ -26,7 +26,7 @@ imgBuilderId=/subscriptions/$subscriptionID/resourcegroups/$imageResourceGroup/p
 # Download the preconfigured role definition example
 curl https://raw.githubusercontent.com/Evilazaro/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json -o aibRoleImageCreation.json
 
-imageRoleDefName="Azure Image Builder Image Def"$(date +'%s')
+imageRoleDefName="Contoso Azure Image Builder Image Def"
 
 # Update the definition
 sed -i -e "s%<subscriptionID>%$subscriptionID%g" aibRoleImageCreation.json

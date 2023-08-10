@@ -1,5 +1,5 @@
 {
-    "Name": "Azure Image Builder Image Def1691612231",
+    "Name": "Contoso Azure Image Builder Image Def",
     "IsCustom": true,
     "Description": "Image Builder access to create resources for the image build, you should delete or split out as appropriate",
     "Actions": [
@@ -16,7 +16,7 @@
   
     ],
     "AssignableScopes": [
-      "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-ImageBuilder-Base-Images-rg"
+      "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-ImageBuilder-Base-Images-Engineers-rg"
     ]
   }
 

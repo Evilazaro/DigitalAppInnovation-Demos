@@ -6,11 +6,11 @@ echo "Setting Variables"
 echo "-----------------"
 
 # Resource group name - we're using myImageBuilderRG in this example
-imageResourceGroup='Contoso-ImageBuilder-Base-Images-rg'
+imageResourceGroup='Contoso-ImageBuilder-Base-Images-Engineers-rg'
 # Region location 
 location='EASTUS2'
 # Run output name
-runOutputName='Win11EntBaseImageEngineers'
+runOutputName='runOutputManagedImage'
 # The name of the image to be created
 imageName='Win11EntBaseImageEngineers'
 
