@@ -7,7 +7,6 @@
         "Microsoft.Compute/galleries/images/read",
         "Microsoft.Compute/galleries/images/versions/read",
         "Microsoft.Compute/galleries/images/versions/write",
-
         "Microsoft.Compute/images/write",
         "Microsoft.Compute/images/read",
         "Microsoft.Compute/images/delete"
@@ -19,4 +18,3 @@
       "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-ImageBuilder-Base-Images-Engineers-rg"
     ]
   }
-
