@@ -32,7 +32,7 @@
             {
                 "type": "PowerShell",
                 "name": "InstallWSL",
-                "runAsSystem": true,
+                "runElevated": true,
                 "runElevated": true,
                 "inline": [
                     "wsl --install"
@@ -62,7 +62,7 @@
             {
                 "type": "PowerShell",
                 "name": "InstallDocker",
-                "runAsSystem": true,
+                "runElevated": true,
                 "runElevated": true,
                 "inline": [
                     "choco install docker-desktop"
@@ -71,7 +71,7 @@
             {
                 "type": "PowerShell",
                 "name": "InstallVSCode",
-                "runAsSystem": true,
+                "runElevated": true,
                 "runElevated": true,
                 "inline": [
                     "choco install vscode"
@@ -80,7 +80,7 @@
             {
                 "type": "PowerShell",
                 "name": "CloneRepo",
-                "runAsSystem": true,
+                "runElevated": true,
                 "runElevated": true,
                 "inline": [
                     "git clone https://github.com/Evilazaro/eShopOnContainers.git c:\\eShopOnContainers"
