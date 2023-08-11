@@ -33,6 +33,13 @@
                 "type": "PowerShell",
                 "name": "InstallChocolatey",
                 "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/VMImageCustomization/InstallChocolatey.ps1"
+            },
+            {
+                "type": "PowerShell",
+                "name": "InstallGit",
+                "inline": [
+                    "choco install git"
+                ]
             }
         ],
         "distribute": [
