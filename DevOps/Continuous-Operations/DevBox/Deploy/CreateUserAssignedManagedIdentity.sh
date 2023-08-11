@@ -11,7 +11,7 @@ imgBuilderCliId=$3
 echo "-------------------------------------------------------------"
 
 # Download the preconfigured role definition example
-aibRoleImageCreationOutput='aibRoleImageCreation-Output.json'
+aibRoleImageCreationOutput='./DownloadedFiles/aibRoleImageCreation-Output.json'
 curl https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/aibRoleImageCreation-Template.json -o $aibRoleImageCreationOutput
 
 imageRoleDefName="Contoso Azure Image Builder Image Def"

@@ -1,7 +1,7 @@
 {
     "type": "Microsoft.VirtualMachineImages/imageTemplates",
     "apiVersion": "2022-02-14",
-    "location": "EASTUS2",
+    "location": "<region>",
     "dependsOn": [],
     "tags": {
         "imagebuilderTemplate": "Windows11Enterprise",
@@ -12,7 +12,7 @@
     "identity": {
         "type": "UserAssigned",
         "userAssignedIdentities": {
-            "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourcegroups/Contoso-ImageBuilder-Base-Images-Engineers-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contosoIdentityIBuilderUser": {}
+            "<imgBuilderId>": {}
         }
     },
     "properties": {
@@ -23,9 +23,9 @@
         },
         "source": {
             "type": "PlatformImage",
-            "publisher": "microsoftwindowsdesktop",
-            "offer": "windows-11",
-            "sku": "win11-22h2-ent",
+            "publisher": "microsoftvisualstudio",
+            "offer": "visualstudioplustools",
+            "sku": "vs-2022-ent-general-win11-m365-gen2",
             "version": "latest"
         },
         "customize": [
@@ -42,9 +42,9 @@
         "distribute": [
             {
                 "type": "ManagedImage",
-                "imageId": "/subscriptions/9e946e16-45cd-4e6a-ad69-bb7c5e24c230/resourceGroups/Contoso-ImageBuilder-Base-Images-Engineers-rg/providers/Microsoft.Compute/images/Win11EntBaseImageEngineers",
-                "location": "EASTUS2",
-                "runOutputName": "runOutputManagedImage",
+                "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/images/<imageName>",
+                "location": "<region>",
+                "runOutputName": "<runOutputName>",
                 "artifactTags": {
                     "source": "azVmImageBuilder",
                     "baseosimg": "Windows11-Enterprise"
