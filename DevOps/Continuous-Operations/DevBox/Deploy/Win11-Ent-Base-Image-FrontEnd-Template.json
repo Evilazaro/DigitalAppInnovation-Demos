@@ -23,13 +23,13 @@
         },
         "source": {
             "type": "PlatformImage",
-            "publisher": "microsoftvisualstudio",
-            "offer": "visualstudioplustools",
-            "sku": "vs-2022-ent-general-win11-m365-gen2",
+            "publisher": "microsoftwindowsdesktop",
+            "offer": "windows-11",
+            "sku": "win11-22h2-ent",
             "version": "latest"
         },
         "customize": [
-             {
+            {
                 "type": "WindowsUpdate",
                 "searchCriteria": "IsInstalled=0",
                 "filters": [
@@ -37,6 +37,58 @@
                     "include:$true"
                 ],
                 "updateLimit": 40
+            },
+            {
+                "type": "PowerShell",
+                "name": "InstallChocolatey",
+                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/VMImageCustomization/InstallChocolatey.ps1"
+            },
+            {
+                "type": "PowerShell",
+                "name": "InstallGit",
+                "runAsSystem": false,
+                "runElevated": true,
+                "inline": [
+                    "choco install git"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "InstallVSCode",
+                "runAsSystem": false,
+                "runElevated": true,
+                "inline": [
+                    "choco install vscode"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "InstallVSCodeExtensions",
+                "runAsSystem": false,
+                "runElevated": true,
+                "inline": [
+                    "code --install-extension ms-azuretools.vscode-docker",
+                    "code --install-extension ms-dotnettools.csharp",
+                    "code --install-extension ms-vscode-remote.remote-containers",
+                    "code --install-extension ms-vscode.azure-account",
+                    "code --install-extension ms-vscode.azurecli",
+                    "code --install-extension ms-vscode.powershell",
+                    "code --install-extension ms-vscode.vscode-node-azure-pack",
+                    "code --install-extension ms-vscode.vscode-typescript-tslint-plugin",
+                    "code --install-extension ms-vsliveshare.vsliveshare",
+                    "code --install-extension ms-vsliveshare.vsliveshare-audio",
+                    "code --install-extension ms-vsliveshare.vsliveshare-pack",
+                    "code --install-extension ms-vsliveshare.vsliveshare-pack"
+                ]	
+            },
+            {
+                "type": "PowerShell",
+                "name": "CloneRepo",
+                "runAsSystem": false,
+                "runElevated": true,
+                "inline": [
+                    "git clone https://github.com/Evilazaro/eShopOnContainers.git c:\\eShopOnContainers"
+                ]
             }
         ],
         "distribute": [

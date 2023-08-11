@@ -11,8 +11,6 @@ imageResourceGroup='Contoso-ImageBuilder-Base-Images-Engineers-rg'
 location='EASTUS2'
 # Run output name
 runOutputName='runOutputManagedImage'
-# The name of the image to be created
-imageName='Win11EntBaseImageEngineers'
 identityName=contosoIdentityIBuilderUser
 subscriptionID=$(az account show --query id --output tsv)
 
@@ -28,7 +26,6 @@ aibRoleImageCreation='aibRoleImageCreation.json'
 echo "imageResourceGroup: $imageResourceGroup"
 echo "location: $location"
 echo "runOutputName: $runOutputName"
-echo "imageName: $imageName"
 echo "Subscription ID: $subscriptionID"
 echo "Identity Name: $identityName"
 echo "Identity Client ID: $imgBuilderCliId"
@@ -39,9 +36,10 @@ echo "-----------------"
 
 ./CreateUserAssignedManagedIdentity.sh $imageResourceGroup $subscriptionID $imgBuilderCliId
 
+imageName='Win11EntBaseImageFrontEndEngineers'
 echo "Creating Image $imageName"
-imageTemplateFile=https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/Win11-Ent-Base-Image-Engineers-Template.json
-outputFile='./DownloadedFiles/Win11-Ent-Base-Image-Engineers-Output.json'
+imageTemplateFile=https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/Win11-Ent-Base-Image-FrontEnd-Template.json
+outputFile='./DownloadedFiles/Win11-Ent-Base-Image-FrontEnd-Template-Output.json'
 echo "imageTemplateFile: $imageTemplateFile"
 echo "outputFile: $outputFile"
 
