@@ -46,3 +46,11 @@ echo "imageTemplateFile: $imageTemplateFile"
 echo "outputFile: $outputFile"
 
 ./CreateImage.sh $outputFile $subscriptionID $imageResourceGroup $location $imageName $runOutputName $imgBuilderId $imageTemplateFile
+
+
+imageTemplateFile=https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/Win11-Ent-Base-Image-Engineers-Template.json
+outputFile='Win11-Ent-Base-Image-Engineers-Output.json'
+echo "imageTemplateFile: $imageTemplateFile"
+echo "outputFile: $outputFile"
+
+./CreateImage.sh $outputFile $subscriptionID $imageResourceGroup $location $imageName $runOutputName $imgBuilderId $imageTemplateFile
