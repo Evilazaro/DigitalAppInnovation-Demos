@@ -1,1 +1,1 @@
-choco install vscode
+choco install vscode -y
