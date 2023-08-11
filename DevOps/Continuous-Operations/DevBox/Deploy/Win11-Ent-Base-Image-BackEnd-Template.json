@@ -33,14 +33,12 @@
                 "type": "PowerShell",
                 "name": "InstallVSCodeExtensions",
                 "runAsSystem": false,
-                "runElevated": true,
                 "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/InstallVSCode.ps1"
             },
             {
                 "type": "PowerShell",
                 "name": "CloneRepo",
                 "runAsSystem": false,
-                "runElevated": true,
                 "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/CloneRepo.ps1"
             }
         ],
