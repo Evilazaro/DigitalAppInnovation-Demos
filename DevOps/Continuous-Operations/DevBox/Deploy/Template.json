@@ -50,7 +50,7 @@
             {
                 "type": "PowerShell",
                 "name": "InstallChocolatey",
-                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/VMImageCustomization/InstallChocolatey.ps1"
+                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/InstallChocolatey.ps1"
             },
             {
                 "type": "PowerShell",
