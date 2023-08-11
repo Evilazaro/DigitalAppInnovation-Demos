@@ -37,8 +37,12 @@ echo "-----------------"
 
 ./Register-Features.sh
 
-./CreateUserAssignedManagedIdentity.sh  $imageResourceGroup $location $runOutputName $imageName $subscriptionID $identityName $imgBuilderCliId $imgBuilderId
+./CreateUserAssignedManagedIdentity.sh $imageResourceGroup $subscriptionID $imgBuilderCliId
 
-imageTemplateFile='Win11-Ent-Base-Image-Engineers.json'
+echo "Creating Image"
+imageTemplateFile=https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/Win11-Ent-Base-Image-Engineers-Template.json
+outputFile='Win11-Ent-Base-Image-Engineers-Output.json'
 echo "imageTemplateFile: $imageTemplateFile"
-./CreateImage.sh $imageResourceGroup $imageName $imageTemplateFile
+echo "outputFile: $outputFile"
+
+./CreateImage.sh $outputFile $subscriptionID $imageResourceGroup $location $imageName $runOutputName $imgBuilderId $imageTemplateFile

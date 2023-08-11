@@ -1,26 +1,38 @@
 #!/bin/bash
 echo "Creating Image"
 echo "---------------"
-echo "imageResourceGroup: $1"
-imageResourceGroup=$1
-echo "ImageName: $2"
-imageName=$2
-echo "ImageTemplateFile: $3"
-imageTemplateFile=$3
+echo "outputFile: $1"
+outputFile=$1
+echo "subscriptionID: $2"
+subscriptionID=$2
+echo "imageResourceGroup: $3"
+imageResourceGroup=$3
+echo "location: $4"
+location=$4
+echo "imageName: $5"
+imageName=$5
+echo "runOutputName: $6"
+runOutputName=$6
+echo "imgBuilderId: $7"
+imgBuilderId=$7
+echo "imageTemplateFile: $8"
+imageTemplateFile=$8
 echo "---------------"
 
-curl https://raw.githubusercontent.com/Evilazaro/azvmimagebuilder/master/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json -o $imageTemplateFile
+curl $imageTemplateFile -o $outputFile
+echo "---------------"
+echo "imageTemplateFile: $imageTemplateFile"
 
-sed -i -e "s%<subscriptionID>%$subscriptionID%g" $imageTemplateFile
-sed -i -e "s%<rgName>%$imageResourceGroup%g" $imageTemplateFile
-sed -i -e "s%<region>%$location%g" $imageTemplateFile
-sed -i -e "s%<imageName>%$imageName%g" $imageTemplateFile
-sed -i -e "s%<runOutputName>%$runOutputName%g" $imageTemplateFile
-sed -i -e "s%<imgBuilderId>%$imgBuilderId%g" $imageTemplateFile
+sed -i -e "s%<subscriptionID>%$subscriptionID%g" $outputFile
+sed -i -e "s%<rgName>%$imageResourceGroup%g" $outputFile
+sed -i -e "s%<region>%$location%g" $outputFile
+sed -i -e "s%<imageName>%$imageName%g" $outputFile
+sed -i -e "s%<runOutputName>%$runOutputName%g" $outputFile
+sed -i -e "s%<imgBuilderId>%$imgBuilderId%g" $outputFile
 
 az resource create \
     --resource-group $imageResourceGroup \
-    --properties @$imageTemplateFile \
+    --properties @$outputFile \
     --is-full-object \
     --resource-type Microsoft.VirtualMachineImages/imageTemplates \
     -n $imageName
