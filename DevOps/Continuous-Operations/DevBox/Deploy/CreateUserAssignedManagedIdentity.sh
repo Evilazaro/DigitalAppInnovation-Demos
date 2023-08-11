@@ -14,7 +14,7 @@ echo "-------------------------------------------------------------"
 aibRoleImageCreationOutput='./DownloadedFiles/aibRoleImageCreation-Output.json'
 curl https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/aibRoleImageCreation-Template.json -o $aibRoleImageCreationOutput
 
-imageRoleDefName="Contoso Azure Image Builder Image Def"
+imageRoleDefName="Contoso Azure Image Builder Service Image Creation Role"
 
 # Update the definition
 sed -i -e "s%<subscriptionID>%$subscriptionID%g" $aibRoleImageCreationOutput

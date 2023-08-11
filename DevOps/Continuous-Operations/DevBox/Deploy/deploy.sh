@@ -53,3 +53,5 @@ echo "imageTemplateFile: $imageTemplateFile"
 echo "outputFile: $outputFile"
 
 ./CreateImage.sh $outputFile $subscriptionID $imageResourceGroup $location $imageName $runOutputName $imgBuilderId $imageTemplateFile
+
+./DeployAzureDevBox.sh $subscriptionID $imageResourceGroup $location $imageName $runOutputName $imgBuilderId
