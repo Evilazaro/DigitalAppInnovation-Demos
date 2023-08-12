@@ -33,26 +33,6 @@
                 "type": "PowerShell",
                 "name": "InstallChocolatey",
                 "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/InstallChocolatey.ps1"
-            },
-            {
-                "type": "PowerShell",
-                "name": "InstallGit",
-                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/InstallGit.ps1"
-            },
-            {
-                "type": "PowerShell",
-                "name": "InstallVSCode",
-                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/InstallVSCode.ps1"
-            },
-            {
-                "type": "PowerShell",
-                "name": "InstallVSCodeExtensions",
-                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/InstallVSCode.ps1"
-            },
-            {
-                "type": "PowerShell",
-                "name": "CloneRepo",
-                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/CloneRepo.ps1"
             }
         ],
         "distribute": [
