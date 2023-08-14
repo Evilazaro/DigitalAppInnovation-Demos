@@ -1,23 +1,10 @@
 {
-    "type": "Microsoft.VirtualMachineImages/imageTemplates",
     "apiVersion": "2022-02-14",
-    "location": "<region>",
+    "type": "Microsoft.VirtualMachineImages/imageTemplates",
     "dependsOn": [],
     "name": "<imageName>",
-    "tags": {
-        "imagebuilderTemplate": "Windows11Enterprise",
-        "userIdentity": "enabled",
-        "Division": "IT",
-        "Environment": "Engineer-Workstation"
-    },
-    "identity": {
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-            "<imgBuilderId>": {}
-        }
-    },
+    "location": "<region>",
     "properties": {
-        "buildTimeoutInMinutes": 100,
         "vmProfile": {
             "vmSize": "Standard_D8s_v3",
             "osDiskSizeGB": 128
@@ -25,21 +12,36 @@
         "source": {
             "type": "PlatformImage",
             "publisher": "microsoftvisualstudio",
-            "offer": "visualstudioplustools",
+            "offer": "windowsplustools",
             "sku": "vs-2022-ent-general-win11-m365-gen2",
             "version": "latest"
+        },
+        "customize": {
+            "type": "PowerShell",
+            "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/CloneRepo.ps1",
+            "inline": [
+                "powershell.exe -ExecutionPolicy Unrestricted -File CloneRepo.ps1"
+            ],
+            "runElevated": true
         },
         "distribute": [
             {
                 "type": "ManagedImage",
                 "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/images/<imageName>",
-                "location": "<region>",
-                "runOutputName": "<runOutputName>",
-                "artifactTags": {
-                    "source": "azVmImageBuilder",
-                    "baseosimg": "Windows11-Enterprise"
-                }
+                "location": "westus3",
+                "runOutputName": "runOutputManagedImage"
             }
         ]
+    },
+    "tags": {
+        "division": "IT",
+        "Environment": "Dev-Workstation",
+        "Role": "Front-End-Engineer"
+    },
+    "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<identityName>": {}
+        }
     }
 }
