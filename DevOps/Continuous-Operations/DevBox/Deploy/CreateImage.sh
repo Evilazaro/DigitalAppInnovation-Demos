@@ -11,12 +11,10 @@ echo "location: $4"
 location=$4
 echo "imageName: $5"
 imageName=$5
-echo "runOutputName: $6"
-runOutputName=$6
-echo "imgBuilderId: $7"
-imgBuilderId=$7
-echo "imageTemplateFile: $8"
-imageTemplateFile=$8
+echo "identityName: $6"
+identityName=$6
+echo "imageTemplateFile: $7"
+imageTemplateFile=$7
 echo "---------------"
 
 curl $imageTemplateFile -o $outputFile
@@ -27,8 +25,7 @@ sed -i -e "s%<subscriptionID>%$subscriptionID%g" $outputFile
 sed -i -e "s%<rgName>%$imageResourceGroup%g" $outputFile
 sed -i -e "s%<region>%$location%g" $outputFile
 sed -i -e "s%<imageName>%$imageName%g" $outputFile
-sed -i -e "s%<runOutputName>%$runOutputName%g" $outputFile
-sed -i -e "s%<imgBuilderId>%$imgBuilderId%g" $outputFile
+sed -i -e "s%<identityName>%$identityName%g" $outputFile
 
 az resource create \
     --resource-group $imageResourceGroup \
