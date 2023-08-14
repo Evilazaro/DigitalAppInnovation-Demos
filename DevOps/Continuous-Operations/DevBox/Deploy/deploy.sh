@@ -15,18 +15,16 @@ subscriptionID=$(az account show --query id --output tsv)
 az group create -n $imageResourceGroup -l $location
 az identity create --resource-group $imageResourceGroup -n $identityName
 
-aibRoleImageCreation='aibRoleImageCreation.json'
-
 echo "imageResourceGroup: $imageResourceGroup"
 echo "location: $location"
 echo "Subscription ID: $subscriptionID"
 echo "Identity Name: $identityName"
-echo "Identity ID: $imgBuilderId"
+echo "Identity ID: $identityName"
 echo "-----------------"
 
 ./Register-Features.sh
 
-./CreateUserAssignedManagedIdentity.sh $imageResourceGroup $subscriptionID $
+./CreateUserAssignedManagedIdentity.sh $imageResourceGroup $subscriptionID $identityName
 
 imageName='Win11EntBaseImageFrontEndEngineers'
 echo "Creating Image $imageName"
