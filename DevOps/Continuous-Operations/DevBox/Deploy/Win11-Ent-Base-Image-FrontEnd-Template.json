@@ -16,15 +16,17 @@
             "sku": "base-win11-gen2",
             "version": "latest"
         },
-        "customize": {
-            "type": "PowerShell",
-            "name": "CloneRepo",
-            "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/CloneRepo.ps1",
-            "inline": [
-                "powershell.exe -ExecutionPolicy Unrestricted -File CloneRepo.ps1"
-            ],
-            "runElevated": true
-        },
+        "customize": [
+            {
+                "type": "PowerShell",
+                "name": "CloneRepo",
+                "scriptUri": "https://raw.githubusercontent.com/Evilazaro/DigitalAppInnovation-Demos/main/DevOps/Continuous-Operations/DevBox/Deploy/VMImageCustomization/CloneRepo.ps1",
+                "inline": [
+                    "powershell.exe -ExecutionPolicy Unrestricted -File CloneRepo.ps1"
+                ],
+                "runElevated": true
+            }
+        ],
         "distribute": [
             {
                 "type": "ManagedImage",
