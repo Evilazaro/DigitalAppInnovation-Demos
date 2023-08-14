@@ -8,7 +8,7 @@ echo "-----------------"
 # Resource group name - we're using myImageBuilderRG in this example
 imageResourceGroup='Contoso-ImageBuilder-Base-Images-Engineers-rg'
 # Region location 
-location='EASTUS2'
+location='WestUS3'
 # Run output name
 runOutputName='runOutputManagedImage'
 identityName=contosoIdentityIBuilderUser

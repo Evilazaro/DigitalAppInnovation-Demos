@@ -3,6 +3,7 @@
     "apiVersion": "2022-02-14",
     "location": "<region>",
     "dependsOn": [],
+    "name": "<imageName>",
     "tags": {
         "imagebuilderTemplate": "Windows11Enterprise",
         "userIdentity": "enabled",
@@ -18,7 +19,7 @@
     "properties": {
         "buildTimeoutInMinutes": 100,
         "vmProfile": {
-            "vmSize": "Standard_D8ads_v5",
+            "vmSize": "Standard_E4as_v5",
             "osDiskSizeGB": 128
         },
         "source": {

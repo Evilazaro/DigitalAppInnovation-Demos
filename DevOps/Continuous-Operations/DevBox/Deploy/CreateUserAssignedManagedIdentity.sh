@@ -22,7 +22,7 @@ sed -i -e "s%<rgName>%$imageResourceGroup%g" $aibRoleImageCreationOutput
 sed -i -e "s%Azure Image Builder Service Image Creation Role%$imageRoleDefName%g" $aibRoleImageCreationOutput
 
 # Create role definitions
-az role definition create --role-definition ./$aibRoleImageCreationOutput
+az role definition create --role-definition $aibRoleImageCreationOutput
 
 # Grant a role definition to the user-assigned identity
 az role assignment create \

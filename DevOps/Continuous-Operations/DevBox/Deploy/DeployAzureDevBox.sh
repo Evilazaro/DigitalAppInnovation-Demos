@@ -12,5 +12,5 @@ az group create -n $resourceGroupName -l $location
 
 az devcenter admin network-connection create --location $location --domain-join-type "AzureADJoin" \ 
                                      --networking-resource-group-name $resourceGroupName \
-                                     --subnet-id "/subscriptions/$subscriptionId/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default" \
+                                     --subnet-id "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Network/virtualNetworks/$vnetName/subnets/$subnetName" \
                                      --name "ContostoAzureDevBox-Vnet-Connection" --resource-group $resourceGroupName 
