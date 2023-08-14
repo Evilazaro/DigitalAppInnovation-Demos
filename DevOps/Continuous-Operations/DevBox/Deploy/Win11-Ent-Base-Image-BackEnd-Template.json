@@ -3,6 +3,7 @@
     "apiVersion": "2022-02-14",
     "location": "<region>",
     "dependsOn": [],
+    "name": "<imageName>",
     "tags": {
         "imagebuilderTemplate": "Windows11Enterprise",
         "userIdentity": "enabled",

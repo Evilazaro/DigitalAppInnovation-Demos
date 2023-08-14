@@ -6,12 +6,12 @@ echo "Setting Variables"
 echo "-----------------"
 
 # Resource group name - we're using myImageBuilderRG in this example
-imageResourceGroup='Contoso-ImageBuilder-Base-Images-Engineers-rg'
+imageResourceGroup='Contoso-Base-Images-Engineers-rg'
 # Region location 
 location='WestUS3'
 # Run output name
 runOutputName='runOutputManagedImage'
-identityName=contosoIdentityIBuilderUser
+identityName=contosoIdentityIBuilderUserDevBox
 subscriptionID=$(az account show --query id --output tsv)
 
 az group create -n $imageResourceGroup -l $location
