@@ -14,4 +14,4 @@ echo "-------------------------------------------------------------"
 az role assignment create \
     --assignee $imgBuilderCliId \
     --role "Owner" \
-    --scope /subscriptions/$subscriptionID/resourceGroups/$imageResourceGroup
+    --scope /subscriptions/$subscriptionID
