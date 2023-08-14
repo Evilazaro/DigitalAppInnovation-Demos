@@ -6,7 +6,7 @@ echo "Setting Variables"
 echo "-----------------"
 
 # Resource group name - we're using myImageBuilderRG in this example
-imageResourceGroup='Contoso-ImageBuilder-Base-Images-Engineers-rg3'
+imageResourceGroup='Contoso-ImageBuilder-Base-Images-Engineers-rg'
 # Region location 
 location='EASTUS2'
 # Run output name
