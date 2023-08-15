@@ -12,7 +12,7 @@
         "source": {
             "type": "PlatformImage",
             "publisher": "microsoftvisualstudio",
-            "offer": "windowsplustools",
+            "offer": "visualstudioplustools",
             "sku": "vs-2022-ent-general-win11-m365-gen2",
             "version": "latest"
         },
@@ -28,7 +28,7 @@
     "tags": {
         "division": "IT",
         "Environment": "Dev-Workstation",
-        "Role": "Front-End-Engineer"
+        "Role": "Back-End-Engineer"
     },
     "identity": {
         "type": "UserAssigned",
