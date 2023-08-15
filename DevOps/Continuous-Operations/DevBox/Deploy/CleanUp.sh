@@ -1,38 +1,25 @@
 #!/bin/bash
 
-./login.sh $1
+# This script is designed to delete specific resources from two Azure Resource Groups.
 
-echo "Setting Variables"
-echo "-----------------"
+# Set the resource group names.
+imageResourceGroup='Contoso-Base-Images-Engineers-rg'
+microsoftDevBoxResourceGroupName="Contoso-AzureDevBox-rg"
 
-# Resource group name - we're using myImageBuilderRG in this example
-imageResourceGroup='ContosoImageBuilderRG'
-# Region location 
-location='EASTUS2'
-# Run output name
-runOutputName='ContosoWin11Image'
-# The name of the image to be created
-imageName='ContosoWin11Image'
+# Display the start of the resource deletion process for clarity.
+echo "-----------------------------------------"
+echo "Starting Resource Deletion Process"
+echo "-----------------------------------------"
 
-subscriptionID=$(az account show --query id --output tsv)
+# Delete the "Delete" resource from the imageResourceGroup.
+echo "Deleting 'Delete' resource from '$imageResourceGroup'..."
+az resource delete -n "Delete" -g $imageResourceGroup --resource-type "Microsoft.Resources/deployments"
 
-echo "imageResourceGroup: $imageResourceGroup"
-echo "location: $location"
-echo "runOutputName: $runOutputName"
-echo "imageName: $imageName"
-echo "Subscription ID: $subscriptionID"
-echo "-----------------"
+# Delete the "Delete" resource from the microsoftDevBoxResourceGroupName.
+echo "Deleting 'Delete' resource from '$microsoftDevBoxResourceGroupName'..."
+az resource delete -n "Delete" -g $microsoftDevBoxResourceGroupName --resource-type "Microsoft.Resources/deployments"
 
-az resource delete \
-    --resource-group $imageResourceGroup \
-    --resource-type Microsoft.VirtualMachineImages/imageTemplates \
-    -n $imageName
-
-az role assignment delete \
-    --assignee $imgBuilderCliId \
-    --role "$imageRoleDefName" \
-    --scope /subscriptions/$subscriptionID/resourceGroups/$imageResourceGroup
-
-az role definition delete --name "$imageRoleDefName"
-
-az identity delete --ids $imgBuilderId
+# Display the completion of the resource deletion process.
+echo "-----------------------------------------"
+echo "Resource Deletion Process Completed"
+echo "-----------------------------------------"

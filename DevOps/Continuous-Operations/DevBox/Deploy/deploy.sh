@@ -12,7 +12,7 @@ echo "Setting Variables"
 echo "-----------------"
 
 # Define the resource group name.
-imageResourceGroup='Contoso-Base-Images-Engineers-rg'
+imageResourceGroup='Contoso-Base-Images-Engineers-rg2'
 
 # Define the Azure region where resources will be deployed.
 location='WestUS3'
@@ -63,8 +63,6 @@ echo "outputFile: $outputFile"
 # Initiating the image creation process.
 ./CreateImage.sh $outputFile $subscriptionID $imageResourceGroup $location $imageName $identityName $imageTemplateFile
 
-# Clearing the terminal for clarity.
-clear
 
 # Preparing for the back-end image creation.
 echo "-----------------"
