@@ -12,7 +12,7 @@ echo "Setting Variables"
 echo "-----------------"
 
 # Define the resource group name.
-imageResourceGroup='Contoso-Base-Images-Engineers-rg2'
+imageResourceGroup='Contoso-Base-Images-Engineers-rg'
 
 # Define the Azure region where resources will be deployed.
 location='WestUS3'
